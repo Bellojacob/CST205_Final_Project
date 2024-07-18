@@ -1,2 +1,2 @@
 This file can be deleted as soon as something is placed into this folder, but 
-the folder is not appearing until something is in the folder.
+the folder is not appearing on Github until something is in the folder.
