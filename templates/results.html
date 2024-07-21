@@ -6,9 +6,14 @@
     <title>Results</title>
     {{ bootstrap.load_css() }}
     {{ bootstrap.load_js() }}
+    <link rel="stylesheet" type="text/css" href="static\css\style.css">
+
 
 </head>
 <body>
+    <!-- Display results-->
     <h1>Results</h1>
+    <p>You answered {{ correct_answers }} out of {{ total_questions }} questions correctly.</p>
+    <a class="button" href="{{url_for('home')}}">Take More Quizzes</a>
 </body>
 </html>

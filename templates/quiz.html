@@ -6,9 +6,29 @@
     <title>Quiz</title>
     {{ bootstrap.load_css() }}
     {{ bootstrap.load_js() }}
+    <link rel="stylesheet" type="text/css" href="static\css\style.css">
 
 </head>
 <body>
-    <h1>QUIZZES</h1>
+    <h2>{{ quiz.quiz_title }}</h2>
+    <p>{{ quiz.quiz_description }}</p>
+
+    <!-- display each quiz question, with answers as radio buttons. Then when user presses the submit quiz button,
+     the button will redirect the user to the results page with their score-->
+    <form action="/results" method="post">
+        <input type="hidden" name="quiz_title" value="{{ quiz.quiz_title }}">
+        {% if quiz.questions %}
+            {% for question in quiz.questions %}
+            <h3>{{ question.question }}</h3>
+            {% for answer, is_correct in question.answers.items() %}
+                <label>
+                    <input type="radio" name="question_{{ question.id }}" value="{{ answer }}" data-is-correct="{{ is_correct }}">
+                    {{ answer }}
+                </label><br>
+            {% endfor %}
+            {% endfor %}
+        {% endif %}
+        <input type="submit" value="Submit Quiz">
+    </form>
 </body>
 </html>

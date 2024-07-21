@@ -6,9 +6,21 @@
     <title>Home</title>
     {{ bootstrap.load_css() }}
     {{ bootstrap.load_js() }}
+    <link rel="stylesheet" type="text/css" href="static\css\style.css">
 
 </head>
 <body>
-    <h1>This page is empty</h1>
+
+    <h1>Choose a Quiz!</h1>
+    <!-- display all available quizzes onto homepage with a description under the title,
+     each title is a link that will take user to quiz.html with the selected quiz-->
+    {% for quiz in quiz_info %}
+        <div class="quiz_item">
+            <a href="{{ url_for('quiz', quiz_title=quiz.quiz_title) }}">
+                <h2>{{ quiz.quiz_title }}</h2>
+            </a>
+            <p>{{ quiz.quiz_description }}</p>
+        </div>
+        {% endfor %}
 </body>
 </html>
