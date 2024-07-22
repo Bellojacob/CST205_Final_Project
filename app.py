@@ -4,7 +4,7 @@ from quiz_info import quiz_info
 
 # flask --app app --debug run
 # Test push- Shane
-# jacob bello
+
 
 
 app = Flask(__name__)
