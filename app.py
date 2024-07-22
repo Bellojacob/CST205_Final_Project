@@ -5,6 +5,7 @@ from quiz_info import quiz_info
 # flask --app app --debug run
 # Test push- Shane
 # Carson's test push just making sure it's all good.
+# Carson's second test first one was weird.
 
 app = Flask(__name__)
 bootstrap = Bootstrap5(app)
