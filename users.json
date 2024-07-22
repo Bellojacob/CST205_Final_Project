@@ -1,0 +1,10 @@
+{
+    "users": {
+        "daniela": {
+            "password": "scrypt:32768:8:1$aUgf6gEuYFdOYu3t$161f8e184b69a348d5a1ddfe5c8d70a9ecd9b43abdfb1a03a6e10c64c269652070bd0b8e2224fda60408b820ceedf6d8d532ba049a3d0258af14426a3e9e6ee6",
+            "scores": [
+                1
+            ]
+        }
+    }
+}
